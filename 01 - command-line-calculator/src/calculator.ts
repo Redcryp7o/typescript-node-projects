@@ -18,10 +18,10 @@ function calculator() {
             message: 'Choose an operation:',
             choices: ['Addition', 'Subtraction', 'Multiplication', 'Division']
         }
-    ]).then(answers => {
+    ]).then((answers: { num1: string; num2: string; operation: any; }) => {
         const num1 = parseFloat(answers.num1);
         const num2 = parseFloat(answers.num2);
-        let result: number;
+        let result: number | undefined;
 
         switch (answers.operation) {
             case 'Addition':
@@ -46,7 +46,7 @@ function calculator() {
         }
 
         console.log('Result:', result);
-    }).catch(error => {
+    }).catch((error: any) => {
         console.log('Error:', error);
     });
 }
