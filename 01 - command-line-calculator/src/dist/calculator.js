@@ -22,7 +22,7 @@ function calculator() {
             message: 'Choose an operation:',
             choices: ['Addition', 'Subtraction', 'Multiplication', 'Division']
         }
-    ]).then(answers => {
+    ]).then((answers) => {
         const num1 = parseFloat(answers.num1);
         const num2 = parseFloat(answers.num2);
         let result;
@@ -48,7 +48,7 @@ function calculator() {
                 return;
         }
         console.log('Result:', result);
-    }).catch(error => {
+    }).catch((error) => {
         console.log('Error:', error);
     });
 }
