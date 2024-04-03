@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/calculator.js"
   },
   "bin": {
-    "calculator": "./dist/calculator.js"
+    "calculator": "./src/dist/calculator.js"
   },
   "keywords": [],
   "author": "",
